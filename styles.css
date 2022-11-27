@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root{
+    --green: #00562b;
+    --yellow: #f4e000;
+    --gradient:linear-gradient(90deg, var(--green), var(--yellow));
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--green);
+    color: #fdfbff;
+}
+
+html{
+    font-size: 62.5%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #fdfbff;
+    max-width: 100%;
+    overflow-x: hidden;
+    
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--gradient);
+    font-size: 1.7rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.heading{
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: #017e3c;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+header .textlogo span{
+    font-size: 2.2rem;
+    color: var(--yellow);
+    margin-left: -12rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+header .navbar a{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: whitesmoke;
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color: var(--green);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    margin-top: 5rem;
+}
+
+.home .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.home .content h3{
+    font-size: 7.5rem;
+    color: #333;
+    font-family: 'Dancing Script', cursive;
+    text-decoration: none;
+}
+
+.home .content h3 span{
+    color: var(--green);
+    font-family: 'Dancing Script', cursive;
+}
+
+.home .content p{
+    font-size: 2.5rem;
+    color: #333;
+    padding-top: 3rem;
+}
+
+/* COURSE SECTION */
+
+.courses .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    text-align: center;
+    display: inline-block;
+    margin: 30px 30px 30px 0px;
+  }
+  
+.courses .card .title {
+    color: rgb(15, 15, 15);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.courses .card a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #333;
+}
+
+.courses .card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: var(--green);
+    text-align: center;
+    cursor: pointer;
+    width: 350px;
+    font-size: 18px;
+    margin-left: -10px;
+ }
+
+.courses .card button:hover, a:hover {
+    opacity: 0.7;
+}
+
+.courses .card .subtitle{
+    font-size: 1.4rem;
+    color: #333;
+    padding: 10px 0px 0px 10px;
+}
+
+.courses .card .sub{
+    font-size: 1.4rem;
+    color: rgb(15, 15, 15);
+    font-weight: 600;
+    padding: 10px 0px 0px 10px;
+}
+
+.courses .card span{
+    color: rgb(15, 15, 15);
+    font-weight: 500;
+}
+
+/* RECENT EVENTS */
+
+.events .card {
+    height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    border: 4px solid var(--green);
+    margin-bottom: 20px;
+    background-image: url("media/intrams.png");
+      background-size: cover;
+    
+    @include media {
+      height: 500px;
+    }
+}
+  
+.events .inner {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background: white;
+    box-sizing: border-box;
+    padding: 40px;
+    
+    @include media {
+      width: 50%;
+      height: 100%;
+    }
+}
+  
+.events .title {
+    font-size: 24px;
+    color: black;  
+    text-align: center;
+    font-weight: 700;
+    color: #181818;
+    text-shadow: 0px 2px 2px #a6f8d5;
+    position: relative;
+    margin: 0 0 20px 0;
+    
+    @include media {
+      font-size: 30px;
+    }
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 10rem;
+    padding-top: 3rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #017e3c;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width:auto;
+    margin:0 auto;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+    margin: 2rem;
+}
+
+.footer .box-container .box h3{
+    flex: 2.5rem;
+    padding: 1rem 0;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.footer .box-container .box p{
+    flex: 1.5rem;
+    padding: 0.5rem 0 0 0;
+    padding-left: 15rem;
+    color: #eee;
+    font-size: 1.3rem;
+    text-transform: none;
+    text-align: justify;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color: #fff;
+    border-top: .1rem solid #fff5;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.footer i {
+    color: var(--green);
+    padding-right: 10px;
+}
+
+/* ABOUT PAGE */
+
+.image img{
+    padding-top: 50px;
+    width: 90%;
+}
+
+.text,li,.sub {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: justify;
+    text-transform: none;
+    line-height: 3rem;
+    text-align: justify;
+}
+
+ol {
+    margin-left: 30px;
+}
+
+.vmg .sub  {
+    font-weight: 600;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .textlogo span{
+        font-size: 14px;
+        margin-left: .5px;
+    }
+
+    section {
+        padding-top: 2rem;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0;
+        width: 100%;
+        background: #017e3c;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        max-width: 2rem 0;
+        font-size: 2rem;
+        padding: .5rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+
+    .home{
+        flex-flow: column;
+    }
+
+    .home .image img{
+        width: 100%;
+    }
+
+    .home .content p{
+        font-size: 2rem;
+    }
+
+    .home .content h3 {
+        font-size: 6rem;
+    }
+
+    .events .card {
+        height: 300px;
+        width: 90%;
+        @include media {
+            height: 300px;
+        }
+    }
+
+    .events .inner {
+        height: 30%;
+    }
+
+    .events .inner .title {
+        font-size: 15px;
+        padding-bottom: -20px;
+    }
+
+    .courses {
+        margin-top: -200px;
+    }
+
+    .courses .card {
+        width: 85%;
+        margin: 20px 0;
+    }
+
+    .courses .card button{
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+
+    .footer .box-container .box p{
+        padding-left: 0rem;
+        font-size: 10px;
+    }
+
+    .image {
+        padding-top: 100px;
+    }
+
+    .college-profile {
+        margin-top: -300px;
+    }
+
+
+    
+}
+
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%
+    }
+
+    section{
+        padding-top: 1rem;
+    }
+
+    .college-profile {
+        margin-top: -300px;
+    }
+
+    .courses {
+        margin-top: -200px;
+    }
+
+    .vmg {
+        margin-top: 30px;
+    }
+
+
+}
